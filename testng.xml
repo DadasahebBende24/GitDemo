@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<!--<groups>
+    <run>
+    <include name="Purchase"/>
+        <include name="ErrorHandling"/>
+        <include name="Sanity"/>
+        <include name="Regression"/>
+    </run>
+    </groups>-->
+    
+  <listeners>
+  <listener class-name="AjinkyaProject.TestComponents.Listeners"/>
+  </listeners>  
+ <test thread-count="5" name="Submit Order Test">
+  <!--<parameter name="productName" value="ZARA COAT 3"/>-->
+
+    <classes>
+         <class name="AjinkyaProject.SubmitOrderTest"/>
+    </classes>
+  </test>  
+  <test thread-count="5" name="Error Validation Test">
+    <classes>
+        <class name="AjinkyaProject.ErrorValidationTest"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
